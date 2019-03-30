@@ -1,8 +1,3 @@
-# to use this, the plumber api needs to be activated
-# To do:
-# create a docker script that can install R, genius, its dependencies, and plumber
-# need to run a script that 
-
 import requests
 import pandas as pd
 
@@ -46,17 +41,3 @@ def genius_tracklist(artist, album):
     tracklist = pd.read_json(response.content)
     
     return(tracklist)
-
-
-proxy_war = genius_lyrics("andrew bird", "proxy war")
-
-finest_work = genius_album("andrew bird", "my finest work yet")
-
-finest_tracks = genius_tracklist("andrew bird", "my finest work yet")
-
-
-
-url_template = "http://localhost:80/track?artist={}&song={}"
-url = url_template.format("andrew bird", "proxy war")
-response = requests.get(url)
-    
