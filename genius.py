@@ -3,7 +3,7 @@ import pandas as pd
 
 
 # Define genius_lyrics()
-def genius_lyrics(arist, song):
+def genius_lyrics(artist, song):
 
     url_template = "http://localhost:80/track?artist={}&song={}"
     
